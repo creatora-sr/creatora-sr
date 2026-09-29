@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="<meta name="google-site-verification" content="pnrNvjGJyOK8F3-LE_Py8MsehfvE10HvApWaGf4gP8M" />" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CREATORA S.R - AI & Tech Services</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-dark: #07080c;
+      --card-bg: rgba(15, 18, 30, 0.85);
+      --card-border: rgba(0, 242, 254, 0.2);
+      --primary-cyan: #00f2fe;
+      --primary-pink: #ff007f;
+      --primary-purple: #7928ca;
+      --primary-yellow: #ffb703;
+      --text-light: #f3f4f6;
+      --text-muted: #a1a1aa;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--primary-cyan), var(--primary-pink), var(--primary-yellow));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* HEADER */
+    header {
+      background: rgba(7, 8, 12, 0.95);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 12px 0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container img {
+      height: 52px;
+      width: auto;
+    }
+
+    .btn-contact-nav {
+      background: linear-gradient(135deg, var(--primary-cyan), var(--primary-purple));
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 70px 20px 40px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+    }
+
+    /* SERVICES GRID */
+    .services-section {
+      padding: 40px 0 80px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1rem;
+      color: var(--primary-cyan);
+      letter-spacing: 3px;
+      margin-bottom: 45px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.35s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--primary-pink);
+      box-shadow: 0 12px 30px rgba(255, 0, 127, 0.3);
+    }
+
+    .card-img-wrapper {
+      width: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .card-img-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover .card-img-wrapper img {
+      transform: scale(1.04);
+    }
+
+    .card-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .btn-select-service {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 12px 0;
+      background: linear-gradient(90deg, var(--primary-purple), var(--primary-pink));
+      color: #fff;
+      font-weight: 600;
+      border-radius: 12px;
+      text-decoration: none;
+      margin-top: 5px;
+    }
+
+    /* CONTACT FORM */
+    .contact-section {
+      padding: 70px 0;
+    }
+
+    .form-box {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      padding: 35px;
+      border-radius: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      background: rgba(7, 8, 12, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      color: #fff;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary-cyan), var(--primary-purple));
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo-container">
+        <img src="LOGO.PNG.png" alt="CREATORA S.R Logo">
+      </div>
+      <div>
+        <a href="#contact" class="btn-contact-nav"><i class="fa-envelope fa-solid"></i> Contact Us</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="gradient-text">CREATORA S.R</h1>
+      <p>Your Ideas. Our Creativity — From Imagination to Impact</p>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION WITH YOUR FOLDER IMAGES -->
+  <section class="services-section">
+    <div class="container">
+      <h2 class="section-title">AI AND TECH <span class="gradient-text">SERVICES</span></h2>
+      <p class="section-subtitle">IDEAS + TECHNOLOGY = RESULTS</p>
+      
+      <div class="services-grid">
+
+        <!-- 1. AI Video -->
+        <div class="service-card" onclick="selectService('AI Video')">
+          <div class="card-img-wrapper">
+            <img src="Code_Generated_Image (8).png" alt="AI Video">
+          </div>
+          <div class="card-content">
+            <a href="#contact" class="btn-select-service">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 2. Content Creation -->
+        <div class="service-card" onclick="selectService('Content Creation')">
+          <div class="card-img-wrapper">
+            <img src="Code_Generated_Image (7).png" alt="Content Creation">
+          </div>
+          <div class="card-content">
+            <a href="#contact" class="btn-select-service">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 3. Video Editing -->
+        <div class="service-card" onclick="selectService('Video Editing')">
+          <div class="card-img-wrapper">
+            <img src="Code_Generated_Image (6).png" alt="Video Editing">
+          </div>
+          <div class="card-content">
+            <a href="#contact" class="btn-select-service">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 4. Web Designing -->
+        <div class="service-card" onclick="selectService('Web Designing')">
+          <div class="card-img-wrapper">
+            <img src="Code_Generated_Image (5).png" alt="Web Designing">
+          </div>
+          <div class="card-content">
+            <a href="#contact" class="btn-select-service">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 5. AI Agent Creation -->
+        <div class="service-card" onclick="selectService('AI Agent Creation')">
+          <div class="card-img-wrapper">
+            <img src="Code_Generated_Image (4).png" alt="AI Agent Creation">
+          </div>
+          <div class="card-content">
+            <a href="#contact" class="btn-select-service">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 6. Graphics -->
+        <div class="service-card" onclick="selectService('Graphics')">
+          <div class="card-img-wrapper">
+            <img src="Code_Generated_Image (3).png" alt="Graphics">
+          </div>
+          <div class="card-content">
+            <a href="#contact" class="btn-select-service">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 7. Poster -->
+        <div class="service-card" onclick="selectService('Poster Design')">
+          <div class="card-img-wrapper">
+            <img src="Code_Generated_Image (2).png" alt="Poster">
+          </div>
+          <div class="card-content">
+            <a href="#contact" class="btn-select-service">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 8. Banner -->
+        <div class="service-card" onclick="selectService('Banner Design')">
+          <div class="card-img-wrapper">
+            <img src="Code_Generated_Image (1).png" alt="Banner">
+          </div>
+          <div class="card-content">
+            <a href="#contact" class="btn-select-service">Book This Service</a>
+          </div>
+        </div>
+
+        <!-- 9. Thumbnail -->
+        <div class="service-card" onclick="selectService('Thumbnail Design')">
+          <div class="card-img-wrapper">
+            <img src="Code_Generated_Image.png" alt="Thumbnail">
+          </div>
+          <div class="card-content">
+            <a href="#contact" class="btn-select-service">Book This Service</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="form-box">
+        <h2 style="text-align: center; margin-bottom: 25px;" class="gradient-text">Send Us A Message</h2>
+
+        <form action="https://formspree.io/f/mbglyrel" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email Address</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Select Service</label>
+            <select id="service" name="service" required>
+              <option value="">-- Choose a Service --</option>
+              <option value="AI Video">AI Video</option>
+              <option value="Content Creation">Content Creation</option>
+              <option value="Video Editing">Video Editing</option>
+              <option value="Web Designing">Web Designing</option>
+              <option value="AI Agent Creation">AI Agent Creation</option>
+              <option value="Graphics">Graphics</option>
+              <option value="Poster Design">Poster Design</option>
+              <option value="Banner Design">Banner Design</option>
+              <option value="Thumbnail Design">Thumbnail Design</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" rows="4" placeholder="Describe your project..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Submit Request</button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function selectService(serviceName) {
+      const selectBox = document.getElementById('service');
+      selectBox.value = serviceName;
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
