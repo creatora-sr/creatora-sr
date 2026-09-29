@@ -3,7 +3,7 @@
 <head>
   <head>
   <meta charset="UTF-8">
-  <meta name="google-site-verification" content="<meta name="google-site-verification" content="pnrNvjGJyOK8F3-LE_Py8MsehfvE10HvApWaGf4gP8M" />
+  <meta name="google-site-verification" content="<meta name="google-site-verification" content="pnrNvjGJyOK8F3-LE_Py8MsehfvE10HvApWaGf4gP8M"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CREATORA S.R - AI & Tech Services</title>
   
@@ -227,7 +227,7 @@
         <img src="LOGO.PNG.png" alt="CREATORA S.R Logo">
       </div>
       <div>
-        <a href="#contact" class="btn-contact-nav"><i class="fa-envelope fa-solid"></i> Contact Us</a>
+        <a href="#contact" class="btn-contact-nav">Contact Us</a>
       </div>
     </div>
   </header>
@@ -394,5 +394,32 @@
       document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     }
   </script>
+  <!-- CONTACT FORM SECTION -->
+<section id="contact" class="contact-section">
+  <div class="form-box">
+    <h2 style="text-align: center; margin-bottom: 20px;">Contact Us</h2>
+    
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--card-border); background: rgba(255,255,255,0.05); color: #fff;">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--card-border); background: rgba(255,255,255,0.05); color: #fff;">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--card-border); background: rgba(255,255,255,0.05); color: #fff;"></textarea>
+      </div>
+
+      <button type="submit" style="width: 100%; padding: 12px; background: linear-gradient(90deg, #00c6ff, #0072ff); border: none; color: white; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 10px;">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
 </body>
 </html>
